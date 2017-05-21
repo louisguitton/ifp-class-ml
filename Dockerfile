@@ -1,9 +1,8 @@
-FROM continuumio/miniconda3
+FROM jupyter/datascience-notebook
 
-MAINTAINER ops@dojomadness.com
+MAINTAINER louisguitton93@gmail.com
 
-# RUN wget "https://repo.continuum.io/archive/Anaconda3-4.3.1-Linux-x86_64.sh"
-# RUN bash Anaconda3-4.3.1-Linux-x86_64.sh
-RUN conda install numpy pandas scikit-learn matplotlib seaborn
+COPY . code/
+WORKDIR code/
 
 EXPOSE 80
