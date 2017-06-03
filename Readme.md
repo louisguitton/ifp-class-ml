@@ -38,7 +38,7 @@ example: http://localhost:8888/?token=30491c22aab05ff61757c9d59d911fd2150247e520
 ```bash
 docker-machine ip
 ```
-This will give you the IP address of the notebook. Combine this to the adress given by the console
+This will give you the IP address of the notebook. Combine this to the address given by the console
 
 example: http://178.5.158.196:8888/?token=30491c22aab05ff61757c9d59d911fd2150247e520ff9283
 
