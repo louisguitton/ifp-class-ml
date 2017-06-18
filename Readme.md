@@ -5,8 +5,6 @@ IFP School - 30 Juin 2017
 Louis GUITTON, 
 Data Scientist, Dojo Madness
 
-Slides: http://bit.ly/log-ifpschool 
-
 Twitter: [@laguittemh](https://twitter.com/LaGuitteMH) 
 
 ## Initial Setup
@@ -42,8 +40,18 @@ This will give you the IP address of the notebook. Combine this to the address g
 
 example: http://178.5.158.196:8888/?token=30491c22aab05ff61757c9d59d911fd2150247e520ff9283
 
-## Demo 1 : Flower Classification
+## Part 1: Introduction to Machine Learning - Louis Guitton
 
-## Demo 2 : Simplest Neural Network
+Slides: http://bit.ly/log-ifpschool 
 
-## Demo 3 : Cats vs Dogs
+* Demo 1 : Flower Classification
+
+* Demo 2 : Simplest Neural Network
+
+* Demo 3 : Cats vs Dogs
+
+## Part 2: Flexibility, the Challenge of the Power System - Basile Bouquet
+
+## Part 3: Building Energy Demand Prediction - Louis Guitton
+
+## Part 4: PV Forecast at Rueil Malmaison - Basile Bouquet
