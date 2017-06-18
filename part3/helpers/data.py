@@ -28,6 +28,15 @@ s = data['steam']
 df = e_w.reset_index().merge(s, how='outer', on=list(e.columns[1:])).set_index('index')
 df = df[['electricity-kWh', 'chilledWater-TonDays', 'steam-LBS'] + list(e.columns[1:])]
 
+
+def add_daily_time_features(df):
+    df['weekday'] = df.index.weekday
+    df['day'] = df.index.dayofyear
+    df['week'] = df.index.weekofyear
+    return df
+
+df = add_daily_time_features(df)
+
 column_details = {
     "coolingDegrees": "if T-C - 12 > 0, then = T-C - 12, else = 0. Assume that when outdoor temperature is below 12C, no cooling is needed, which is true for many buildings. This will be useful for daily prediction, because the average of hourly cooling degrees is better than average of hourly temperature.",
     "cosHour": "$\text{cos}(\text{hourOfDay} \cdot \frac{2\pi}{24})$",
@@ -40,3 +49,19 @@ column_details = {
     "Tdew-C": "Dew-point temperature",
     "Humidity ratio": "Humidity ratio is calcluated based on T-C, RH and pressure. Humidity ratio is important for chilled water prediction as chilled water is also used to dry the air discharged to rooms. Using humidity ratio will be more efficient and effective than using RH and dew point temperature."
 }
+
+
+def train_test_split(*arrays):
+
+    res = []
+    for array in arrays:
+        train = pd.DataFrame(data=array, index=np.arange('2012-01', '2013-07', dtype='datetime64[D]'))
+        test = pd.DataFrame(data=array, index=np.arange('2013-07', '2014-11', dtype='datetime64[D]'))
+
+        train = train.fillna(train.mean())
+        test = test.fillna(test.mean())
+
+        res.append(train)
+        res.append(test)
+
+    return res
