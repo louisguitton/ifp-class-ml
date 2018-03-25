@@ -1,0 +1,12 @@
+pandas
+matplotlib
+scipy
+seaborn
+scikit-learn
+scikit-image
+
+tensorflow
+keras
+pvlib
+netCDF4
+siphon
