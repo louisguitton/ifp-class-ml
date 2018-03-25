@@ -97,6 +97,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+ifp-env/
 
 # Spyder project settings
 .spyderproject

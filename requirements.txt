@@ -10,3 +10,5 @@ keras
 pvlib
 netCDF4
 siphon
+
+ipykernel
