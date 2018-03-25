@@ -2,10 +2,15 @@
 IFP School - 30 Juin 2017
 
 
-Louis GUITTON, 
+Louis GUITTON,
 Data Scientist, Dojo Madness
 
-Twitter: [@laguittemh](https://twitter.com/LaGuitteMH) 
+Twitter: [@louis_guitton](https://twitter.com/louis_guitton)
+
+## Present slides
+```bash
+jupyter nbconvert part1/demo1/Example\ Machine\ Learning\ Notebook.ipynb --to slides --post serve
+```
 
 ## Initial Setup
 
@@ -31,8 +36,8 @@ docker run -it --rm -p 8888:8888 louisguitton/log-ifpschooldd
 
 example: http://localhost:8888/?token=30491c22aab05ff61757c9d59d911fd2150247e520ff9283
 
- 
-**If you're on Windows**, first run 
+
+**If you're on Windows**, first run
 ```bash
 docker-machine ip
 ```
@@ -42,7 +47,7 @@ example: http://178.5.158.196:8888/?token=30491c22aab05ff61757c9d59d911fd2150247
 
 ## Part 1: Introduction to Machine Learning - Louis Guitton
 
-Slides: http://bit.ly/log-ifpschool 
+Slides: http://bit.ly/log-ifpschool
 
 * Demo 1 : Flower Classification
 
